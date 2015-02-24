@@ -29,6 +29,9 @@ After entering a command and the enter key, you need to additionally press Ctrl-
  - AT+CWJAP=<ssid>,<psk> (join AP. ssid and password can be double-quoted)
  - AT+CWLIF (print devices ip)
 
-### References
+### Links
  - http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266
  - http://wiki.iteadstudio.com/ESP8266_Serial_WIFI_Module
+ - https://nurdspace.nl/ESP8266
+ - http://www.electrodragon.com/w/Wi07c
+ - [https://docs.google.com/file/d/0B_ctPy0pJuW6LVdrSFctX1dmTzA/edit?pli=1](ESP8266 AT instruction set)
