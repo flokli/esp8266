@@ -27,7 +27,7 @@ After entering a command and the enter key, you need to additionally press Ctrl-
  - AT+CWMODE=N (1=Station, 2=AP, 3=both)
  - AT+CWLAP (list available APs)
  - AT+CWJAP=<ssid>,<psk> (join AP. ssid and password can be double-quoted)
- - AT+CWLIF (print devices ip)
+ - AT+CIFSR (print devices ip)
 
 ### Links
  - http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266
