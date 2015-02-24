@@ -16,7 +16,7 @@ Use `minicom -b 115200 -D /dev/tty--- -s` to get the serial console. Set Hardwar
 
 ### Bootloader
 The bootloader is set to a strange baud rate (74766 8N1 with 13,375µs).
-This needs to be done manually by an [https://gist.github.com/sentinelt/3f1a984533556cf890d9](external script) after minicom is already configured and listening.
+This needs to be done manually by an [external script](https://gist.github.com/sentinelt/3f1a984533556cf890d9) after minicom is already configured and listening.
 
 ### Firmware
 On the 0018000902-ai03, a baud rate of 9600 8N1 had to be used with firmware version 0.9.2.
