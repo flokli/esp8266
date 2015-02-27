@@ -12,7 +12,10 @@ Connections needed:
  - Now, connect VCC (3.3V!), GND, RX and TX as usual
 
 
-Use `minicom -b 115200 -D /dev/tty--- -s` to get the serial console. Set Hardware Flow Control to "No".
+Use `minicom -b 9600 -D /dev/tty--- -s` to get the serial console. Set Hardware Flow Control to "No".
+
+Attention: always make sure mincom is not running while flashing firmware or uploading files. You can
+temporary suspend it by pressing Ctrl-A,J.
 
 ### Bootloader
 The bootloader is set to a strange baud rate (74766 8N1 with 13,375µs).
@@ -29,7 +32,27 @@ After entering a command and the enter key, you need to additionally press Ctrl-
  - AT+CWJAP=<ssid>,<psk> (join AP. ssid and password can be double-quoted)
  - AT+CIFSR (print devices ip)
 
-### Links
+## NodeMcu
+Open-Source Firmware for the ESP8266 with Lua interpreter and lots of useful bindings
+
+### Installation
+ - Download the [esp-open-sdk](https://github.com/pfalcon/esp-open-sdk)
+ - run `make`
+ - as suggested, add the `xtensa-lx106-elf/bin` directory to your path (by exporting it for the current session or in a permament way, like bashrc
+ - Download [nodemcu-firmware](https://github.com/nodemcu/nodemcu-firmware)
+ - run `make`
+ - Download [nodemcu-uploader](https://github.com/kmpm/nodemcu-uploader)
+
+### Flashing the firmware
+Flash the firmware via `make flash` (GPIO0 needs to be connected to GND for that)
+
+### Uploading init.lua
+Initially, the ESP8266 will simply display the lua prompt at the serial console.
+If you want it to execute a given `init.lua` file on bootup,
+use `nodemcu-uploader.py upload init.lua` to upload the file.
+
+
+## Links
  - http://www.esp8266.com/wiki/doku.php?id=getting-started-with-the-esp8266
  - http://wiki.iteadstudio.com/ESP8266_Serial_WIFI_Module
  - https://nurdspace.nl/ESP8266
